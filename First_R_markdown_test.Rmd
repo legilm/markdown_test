@@ -15,7 +15,7 @@ output:
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-#1 - First R Markdown
+# - First R Markdown
 
 This is an R Markdown document. 
 
@@ -27,7 +27,7 @@ Here you'll see the import of standard data set built-in on R called iris, and a
 summary(iris)
 ```
 
-#2 - Plot
+# - Plot
 
 Here you'll see a plot using the **ggplot2 framework**, with scatter plot of Sepal.Length vs Sepal.Width
 
@@ -38,7 +38,7 @@ ggplot(data = iris, aes(x = Sepal.Length, y = Sepal.Width, color = Species)) +
   labs(x = "Sepal Length", y = "Sepal Width", color = "Species")
 ```
 
-#3 - Table
+# - Table
 
 Here you'll see a table with the data set of iris too.
 
