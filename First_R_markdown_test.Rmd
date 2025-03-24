@@ -1,0 +1,51 @@
+---
+title: "First_R_markdown_test"
+author: "Gilmar"
+date: "`r Sys.Date()`"
+output: 
+   html_document:
+    toc: true
+    number_sections: true
+    toc_float: true
+    theme: cerulean
+    code_folding: show
+---
+
+```{r setup, include=TRUE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+#1 - First R Markdown
+
+This is an R Markdown document. 
+
+This is my first one of this kind.
+
+Here you'll see the import of standard data set built-in on R called iris, and a plot of it.
+
+```{r iris, echo=TRUE}
+summary(iris)
+```
+
+#2 - Plot
+
+Here you'll see a plot using the **ggplot2 framework**, with scatter plot of Sepal.Length vs Sepal.Width
+
+```{r ggplot2, echo=TRUE}
+library(ggplot2)
+ggplot(data = iris, aes(x = Sepal.Length, y = Sepal.Width, color = Species)) +
+  geom_point() +
+  labs(x = "Sepal Length", y = "Sepal Width", color = "Species")
+```
+
+#3 - Table
+
+Here you'll see a table with the data set of iris too.
+
+
+```{r kable, echo=TRUE}
+library(kableExtra)
+kableExtra::kable(iris) |> 
+  kable_styling(latex_options = "striped")
+
+```
